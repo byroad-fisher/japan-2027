@@ -1,0 +1,3 @@
+const list=document.querySelector('#day-list');
+window.TRIP_DAYS.forEach(d=>{const el=document.createElement('article');el.className='day';el.innerHTML=`<div class="num">${d.n}</div><div><h3>${d.city}</h3><p>${d.short}</p></div><span class="tag">${d.tag}</span><div class="detail">${d.detail}</div>`;el.addEventListener('click',()=>el.classList.toggle('open'));list.appendChild(el)});
+if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js').catch(()=>{});}
